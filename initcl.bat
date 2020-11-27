@@ -3,8 +3,10 @@
 if not defined VSINSTALLDIR (
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
+	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Preview\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
+	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio 15.0\VC\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" ) else ( goto init_cl )
 	if not exist %VCVARSPATH% ( set VCVARSPATH="C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" ) else ( goto init_cl )
